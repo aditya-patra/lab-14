@@ -43,12 +43,33 @@ class Color {
             green = val;
         }
         void print() {
-            cout << setw(3) << setfill(0) << red << "::";
-            cout << setw(3) << setfill(0) << green << "::";
-            cout << setw(3) << setfill(0) << blue << "\n";
+            cout << setw(3) << setfill('0') << red << "::";
+            cout << setw(3) << setfill('0') << green << "::";
+            cout << setw(3) << setfill('0') << blue << "\n";
         }
 };
 int main() {
     Color color1 = Color(42, 32, 10);
+    Color color2 = Color(251, 126, 97);
+    color2.setBlue(3);
+    color2.setGreen(25);
+    Color color3 = Color(35, 24, 11);
+    Color color4 = Color(63, 72, 99);
+    color2.setRed(3);
+    color2.setBlue(3);
+    Color color5 = Color(45, 76, 90);
+    Color color6 = Color(23, 32, 23);
+    color6.setGreen(color5.getGreen());
+    std::cout << endl << "Color 1: ";
     color1.print();
+    std::cout << endl << "Color 2: ";
+    color2.print();
+    std::cout << endl << "Color 3: ";
+    color3.print();
+    std::cout << endl << "Color 4: ";
+    color4.print();
+    std::cout << endl << "Color 5: ";
+    color5.print();
+    std::cout << endl << "Color 6: ";
+    color6.print();
 }
